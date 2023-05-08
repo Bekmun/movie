@@ -78,7 +78,7 @@ const Header = () => {
 				</div>
 				<ul className="menu-list">
 					<li className="menu-list__item" onClick={() => navigationHeader('movie')}>Фильмы</li>
-					<li className="menu-list__item" onClick={() => navigationHeader('tv')}>Телешоу</li>
+					<li className="menu-list__item" onClick={() => navigationHeader('tv')}>Сериалы</li>
 					<li className="menu-list__item"><HiOutlineSearch onClick={openSearch} /></li>
 				</ul>
 				<div className="module-menu">
@@ -89,7 +89,7 @@ const Header = () => {
 			{showSearch && <div className="search-bar">
 				<ContentWrapper>
 					<div className="search-bar__input">
-						<input type='text' placeholder='Поиск фильма или сериала...' onKeyUp={searchQueryHandler}
+						<input type='text' placeholder='Поиск...' onKeyUp={searchQueryHandler}
 							onChange={e => setQuery(e.target.value)} />
 							<VscChromeClose onClick={() => setShowSearch(false)} />
 					</div>

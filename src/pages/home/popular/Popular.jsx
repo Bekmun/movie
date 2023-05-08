@@ -16,7 +16,7 @@ const Popular = () => {
 		<section className='carousel-trend'>
 			<ContentWrapper>
 				<h2 className='carousel-trend__title'>Популярные</h2>
-				<SwitchTabs data={['Фильмы', 'Телешоу']} onTabChange={onTabChange} />
+				<SwitchTabs data={['Фильмы', 'Сериалы']} onTabChange={onTabChange} />
 			</ContentWrapper>
 			<Carousel data={data?.results} loading={loading} endpoint={endpoint} />
 		</section>

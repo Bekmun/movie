@@ -25,6 +25,12 @@ const HeroBanner = () => {
 		}
 	}
 
+	const searchQueryBtn = (event) => {
+		if (query.length > 0) {
+			navigate(`/search/${query}`)
+		}
+	}
+
 	return (
 		<section className='heroBanner'>
 			{!loading && <div className='backdrop-img'>
@@ -35,12 +41,12 @@ const HeroBanner = () => {
 				<div className='heroBannerContent'>
 					<span className='title'>Добро пожаловать</span>
 					<h2 className='subtitle'>
-						Миллионы фильмов, телешоу и людей, которых нужно открыть. Исследуйте сейчас.
+						Миллионы фильмы и сериалы ждут тебя. Приятного просмотра.
 					</h2>
 					<div className='searchInput'>
-						<input type='text' placeholder='Поиск фильма или сериала...' onKeyUp={searchQueryHandler}
+						<input type='text' placeholder='Что будем искать...' onKeyUp={searchQueryHandler}
 							onChange={e => setQuery(e.target.value)} />
-						<button>Поиск</button>
+						<button onClick={searchQueryBtn}>Поиск</button>
 					</div>
 				</div>
 			</ContentWrapper>
