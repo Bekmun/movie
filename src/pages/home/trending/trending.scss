@@ -1,0 +1,17 @@
+.carousel-trend {
+	position: relative;
+	margin-bottom: 70px;
+
+	&>.contentWrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		font-size: 24px;
+		color: #fff;
+		font-weight: 400;
+	}
+}
